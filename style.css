@@ -13,16 +13,19 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(185, 75%, 39%);
+  background-color: #19a2ae;
+  position: relative;
+  overflow: hidden;
 }
 
 .card {
   min-height: 50vh;
   background-color: white;
-  /* border: 1px solid black; */
   border-radius: 1em;
   overflow: hidden;
   width: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+  z-index: 3;
 }
 
 .card-image{
@@ -51,15 +54,29 @@ main{
   border-radius: 50%;
 }
 
+.name{
+  font-weight: bold;
+  color: #333;
+  font-size: 1.6rem;
+  margin-right: .2em;
+}
+
+.city{
+  display: block;
+  text-align: center;
+  margin-top: .7em;
+}
+
 .user p{
   font-size: 1.5rem;
   margin-top: 2em;
+  color: hsl(0, 0%, 59%);
 }
 
 .followers{
   font-size: 1.5rem;
   min-height: 10vh;
-  border-top: 1px solid silver;
+  border-top: 1px solid #dbd8d8b2;
   display: flex;
   gap: 2em;
   justify-content: center;
@@ -68,10 +85,56 @@ main{
 
 .followers .amount{
   font-weight: bold;
+  text-align: center;
 }
 
 .amount span{
+  color: #969696;
+  margin-top: .7em;
   font-size: 1.2rem;
   font-weight: lighter;
   display: block;
+}
+
+.top-circle img{
+  display: none;
+  position: absolute;
+  top: -50em;
+  left: -35em;
+}
+
+.bottom-circle img{
+  position: absolute;
+  top: -50em;
+  left: -35em;
+}
+
+
+@media (min-width: 375px){
+  .top-circle{
+    top: -3em;
+    left: -3em;
+  }
+}
+
+@media (min-width: 768px){
+  .card{ width: 50%; }
+  .top-circle{
+    /* top: -3em;
+    left: -3em; */
+  }
+}
+
+@media (min-width: 1200px){
+  .card{ width: 30%; }
+
+  .top-circle img{
+    position: absolute;
+    /* top: -40em;
+    left: -10em; */
+  }
+
+  .bottom-circle{
+    display: none;
+  }
 }
