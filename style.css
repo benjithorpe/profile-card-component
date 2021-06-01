@@ -1,0 +1,77 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{ font-size: 62.5%; }
+body{ font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+main{
+  padding: 0 2.5em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 75%, 39%);
+}
+
+.card {
+  min-height: 50vh;
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 1em;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-image{
+  min-height: 20vh;
+  background-image: url("images/bg-pattern-card.svg");
+}
+
+.user{
+  position: relative;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user > div{
+  position: absolute;
+  top: -50%;
+  padding: .6em;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.image{
+  border-radius: 50%;
+}
+
+.user p{
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+
+.followers{
+  font-size: 1.5rem;
+  min-height: 10vh;
+  border-top: 1px solid silver;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.followers .amount{
+  font-weight: bold;
+}
+
+.amount span{
+  font-size: 1.2rem;
+  font-weight: lighter;
+  display: block;
+}
